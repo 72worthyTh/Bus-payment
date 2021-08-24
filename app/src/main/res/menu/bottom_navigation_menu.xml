@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_home"
+            android:id="@+id/navigation_home"
+            android:title="Accueil"/>
+
+        <item
+            android:icon="@drawable/ic_money"
+            android:id="@+id/navigation_compte"
+            android:title="Compte"/>
+        <item
+            android:icon="@drawable/ic_history"
+            android:id="@+id/navigation_hist"
+            android:title="Historique"/>
+
+    </group>
+</menu>

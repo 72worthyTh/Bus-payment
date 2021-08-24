@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:backgroundTintMode="src_over"
+    android:background="#FFFFFF"
+    tools:context=".Login_Activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:visibility="visible"
+            android:src="@drawable/logo1">
+
+        </ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="-50dp"
+            android:orientation="vertical"
+
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nom d'utilisateur"
+                android:visibility="invisible"
+                android:textStyle="italic"
+                android:layout_marginTop="14dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp"/>
+            <EditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Username"
+                android:inputType="text" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mot de passe"
+                android:visibility="invisible"
+                android:textStyle="italic"
+
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp"/>
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="CONNEXION"
+                android:textStyle="italic"
+                android:textSize="18dp"
+                android:textColor="#FCFCFD"
+                android:backgroundTint="#000"/>
+
+            <TextView
+                android:id="@+id/changePass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change password"
+                android:layout_marginLeft="40dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginStart="80dp"
+android:background="#EE051478"
+                android:textStyle="italic"
+                android:textSize="18dp"
+                android:textColor="#FBFAFA"
+                android:backgroundTint="#0A7AE9"/>
+
+            <TextView
+                android:id="@+id/forgotPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="80dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="80dp"
+                android:text="Forgot password ?"
+                android:textStyle="italic"
+                android:background="#033257"
+                android:textSize="18dp"
+                android:textColor="#F3FDFCFC"
+                android:backgroundTint="#0A7AE9"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/progressBar"
+            android:layout_marginTop="-250dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:background="#FBC02D"
+            android:gravity="start">
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

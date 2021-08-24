@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:id="@+id/card_item">
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#49000000"/>
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:text="Nom:"/>
+
+        <TextView
+            android:id="@+id/idnom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginLeft="80dp"
+            android:textColor="@android:color/black"
+            android:text="nom"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_below="@id/idnom"
+            android:textColor="@android:color/black"
+            android:text="Prenom:"
+            />
+        <TextView
+            android:id="@+id/idprenom"
+            android:layout_below="@id/idnom"
+            android:text="prenom"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_below="@id/idprenom"
+            android:textColor="@android:color/black"
+            android:text="No compte:"
+            />
+        <TextView
+            android:id="@+id/idnumerocompte"
+            android:layout_below="@id/idprenom"
+            android:text="compte"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_below="@id/idnumerocompte"
+            android:textColor="@android:color/black"
+            android:text="Type Client:"
+            />
+        <TextView
+            android:id="@+id/idtypeclient"
+            android:layout_below="@id/idnumerocompte"
+            android:text="type"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_below="@id/idtypeclient"
+            android:textColor="@android:color/black"
+            android:text="Date de création:"
+            />
+        <TextView
+            android:id="@+id/iddatecreation"
+            android:layout_below="@id/idtypeclient"
+            android:text="date"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="140dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

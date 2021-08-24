@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:id="@+id/idcard_item">
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#49000000"/>
+
+    <RelativeLayout
+        android:layout_width="442dp"
+        android:layout_height="130pt"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:background="#DFC2C2"
+        android:id="@+id/lay"
+        android:orientation="horizontal">
+
+        <LinearLayout
+
+            android:layout_width="100dp"
+            android:layout_height="120pt"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="NOM:"
+                android:textColor="#000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="PRENOM:"
+                android:textColor="#000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="TELEPHONE:"
+                android:textColor="#000" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="TYPE:"
+                android:textColor="#000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="COMPTE:"
+                android:textColor="#000" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="SOLDE:"
+                android:textColor="#000" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="ETAT:"
+                android:textColor="#000" />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/idnomuser"
+                android:textColor="#000"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/idprenomuser"
+                android:layout_height="30dp"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/idteluser"
+                android:textColor="#000"  />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/idtypeuser"
+                android:textColor="#000"  />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/idcompteuser"
+                android:textColor="#000"  />
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/idsoldeuser"
+                android:layout_height="30dp"
+                android:textColor="#000"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/idetatuser"
+                android:layout_height="30dp"
+                android:textColor="#000" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView  >

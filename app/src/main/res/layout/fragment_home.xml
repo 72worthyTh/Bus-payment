@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+    <RelativeLayout
+        android:background="#0097A7"
+        android:layout_width="match_parent"
+        android:layout_height="642dp">
+
+        <EditText
+            android:id="@+id/id_montatpayer"
+            android:layout_width="550dp"
+            android:layout_height="30dp"
+            android:background="#FDFDFD"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="80dp"
+            android:hint="MONTANT EN CFA" />
+
+        <EditText
+            android:id="@+id/id_comptescaner"
+            android:layout_width="400dp"
+            android:layout_height="30dp"
+            android:background="#FDFDFD"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="80dp"
+            android:visibility="invisible"/>
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="130dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="120dp"
+            android:src="@mipmap/grdefaut1">
+
+        </ImageView>
+
+        <Button
+            android:id="@+id/btnScanBarcode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="400dp"
+            android:text="Scanner la carte!" />
+
+        <Button
+            android:id="@+id/btnAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="607dp"
+            android:text="ADD CONTENT IN THE MAIL"
+            android:visibility="invisible" />
+    </RelativeLayout>
+       <TextView
+        android:id="@+id/txtBarcodeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10px"
+        android:text="No Barcode Detected"
+           android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</FrameLayout>

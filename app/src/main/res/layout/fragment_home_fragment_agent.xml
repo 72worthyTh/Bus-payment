@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="#FFFF"
+    tools:context=".fragments.HomeFragmentAgent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="100dp"
+        android:src="@drawable/logo1"
+        android:visibility="gone"
+        ></ImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="527dp">
+        <TableLayout
+            android:id="@+id/simpleTableLayout"
+             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="2"> <!-- stretch the second column of the layout-->
+
+            <!-- first row of the table layout-->
+            <TableRow
+
+                android:id="@+id/firstRow"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <!-- first element of the row-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/addClient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="#A7DDA9">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#9ABCCF"
+                        android:orientation="horizontal"
+                        >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_edit_black_24dp"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Nouveau client"
+                        android:textColor="#000" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/listClient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="#A7DDA9">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#9ABCCF"
+                        android:orientation="horizontal"
+                        >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_list_black_24dp"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Listes des clients"
+                        android:textColor="#000" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/nouveaurech"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="#A7DDA9">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#9ABCCF"
+                        android:orientation="horizontal"
+                        >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_keyboard_black_24dp"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Recharges"
+                        android:textColor="#000" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </TableRow>
+        </TableLayout>
+
+
+
+        //Ajout client
+
+
+        <LinearLayout
+            android:id="@+id/form_addclient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:background="#E4FAF7F5"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nom: "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="25dp"
+                        android:textStyle="italic"
+                        android:visibility="gone"/>
+
+                    <EditText
+                        android:id="@+id/editTextNom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:hint="nom" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone"
+                        android:text="Prénom: "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="25dp"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/editTextPrenom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="prénom"
+
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Télephone:"
+                        android:visibility="gone"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="25dp"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/editTextTelephone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:hint="numero telephone"
+
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Type Client"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="12dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radiobtnType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioBtnSimple"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Simple" />
+
+
+                        <RadioButton
+                            android:id="@+id/radioBtnCom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agent" />
+
+                        <RadioButton
+                            android:id="@+id/radioBtnchauf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Proprietaire Bus" />
+
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/idP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text=""
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="25dp"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/editpermis"
+                        android:layout_width="match_parent"
+                        android:layout_height="62dp"
+                        android:layout_marginLeft="10dp"
+                        android:hint="numero de la carte d'identite"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/idNif"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text=""
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="25dp"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/editIdComerce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:hint="NIF"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/idBout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text=""
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="25dp"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/editNomButique"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:hint="numero de la boutique"
+                        android:textStyle="italic"
+
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Numero de compte:"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="25dp"
+                        android:textStyle="italic"
+                        android:visibility="gone"/>
+
+                    <EditText
+                        android:id="@+id/editnumcompte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:hint="numero de compte"
+
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Nom d'utilisateur:"
+                        android:visibility="gone"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="25dp"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/editTextUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:hint="nom d'utilisateur"
+                        android:inputType="text"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Mot de passe:"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="25dp"
+                        android:visibility="gone"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/editTextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="Mot de passe"
+                        android:inputType="textPassword"
+                        android:textStyle="italic" />
+
+                    <Button
+                        android:id="@+id/buttonSave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginEnd="80dp"
+                        android:backgroundTint="#000"
+                        android:text="ENREGISTRER"
+                        android:textColor="#FDFBFB"
+                        android:textStyle="italic" />
+
+                    <ProgressBar
+                        android:id="@+id/idprogressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"></LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+        //Liste client
+
+        <LinearLayout
+            android:id="@+id/form_listclient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:background="#C59ACF"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refreshclient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_viewclient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"></LinearLayout>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        </LinearLayout>
+        //recharge
+
+        <LinearLayout
+            android:id="@+id/form_recharger"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:background="#CFBE93"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="474dp">
+
+                <EditText
+                    android:id="@+id/id_montatpayer"
+                    android:layout_width="550dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="60dp"
+                    android:inputType="number"
+                    android:layout_marginRight="50dp"
+                    android:hint="MONTANT EN FB" />
+
+                <EditText
+                    android:id="@+id/id_montantvalide"
+                    android:layout_width="550dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginRight="50dp"
+                    android:visibility="invisible" />
+
+                <SurfaceView
+                    android:id="@+id/surfaceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginBottom="120dp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginBottom="120dp"
+                    android:src="@mipmap/grdefaut1">
+
+                </ImageView>
+
+                <Button
+                    android:id="@+id/btnScanBarcode"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="350dp"
+                    android:text="Scanner la carte!" />
+
+                <Button
+                    android:id="@+id/btnAction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="607dp"
+                    android:text="ADD CONTENT IN THE MAIL"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtBarcodeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10px"
+                android:layout_marginLeft="10dp"
+                android:text="No Barcode Detected"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
